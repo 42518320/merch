@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1 style="font-family: arial, sans-serif">Register</h1>
+    <form action="/register" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Full Name" type="text">
+        <input autocomplete="off" name="email" placeholder="Email" type="email">
+        <input autocomplete="off" name="number" placeholder="Phone Number (+1)" type="tel">
+        <br>
+        <br>
+        <br>
+        <br>
+        {% for clothes in clothes %}
+            <center><input name="clothes" type="radio" value="{{ clothes }}"> {{ clothes }}</center>
+        {% endfor %}
+        <br>
+        <center><button type="submit">Register</button></center>
+        <br>
+        <br>
+        <center><p>Customer Service: <b>Luis A. Diaz</b>: +1 (630) 803-8794</p></center>
+        <center><p>Customer Service: <b>Anthony J. Amendola</b>: anthony.amendola.contact@gmail.com</p></center>
+    </form>
+
+    <style>
+        .button {
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        color: white;
+        padding: 50px 100px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 36px;
+        font-family: Candara;
+        margin: 12px 6px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+
+        .SpringGreen {
+        background-color: white;
+        color: SpringGreen;
+        border: 4px solid #00FF7F;
+      }
+
+        .SpringGreen:hover {
+        background-color: #00FF7F;
+        color: white;
+      }
+
+      </style>
+
+    <a href="https://PayPal.me/Icyest" target="_blank">
+    <center><button class="button SpringGreen"><b>Donate</b></button></center>
+    </a>
+{% endblock %}
